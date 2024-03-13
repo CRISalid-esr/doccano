@@ -41,3 +41,67 @@
 .theme--dark .tui-editor-contents code {
   color: #3e8774; /* inversion of #c1788b */
 }
+
+table.duplicate-comparaison {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+table.duplicate-comparaison th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table.duplicate-comparaison th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table.duplicate-comparaison tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table.duplicate-comparaison tr:hover {
+    background-color: #ddd;
+}
+
+table.duplicate-comparaison td[colspan="3"] {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+table.duplicate-comparaison tr.highlight {
+    background-color: #ffcc00;
+}
+
+table.duplicate-comparaison td {
+    font-size: 1rem;
+}
+
+table.duplicate-comparaison td + td {
+    width: 45%;
+}
+
+table.duplicate-comparaison td[colspan="3"] {
+    background-color: #ddd;
+    font-weight: bold;
+    text-align: center;
+}
+
+table.duplicate-comparaison .badge {
+    line-height: 1.2;
+    background-color: #3e8774;
+    color: white;
+    padding: 6px;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-top: 0px;
+    float: right;
+    display: inline-block;
+}

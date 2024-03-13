@@ -35,11 +35,15 @@
       </v-chip>
     </template>
     <template #[`item.text`]="{ item }">
-      <span class="d-flex d-sm-none">{{ item.text | truncate(50) }}</span>
-      <span class="d-none d-sm-flex">{{ item.text | truncate(200) }}</span>
+      <span class="d-flex d-sm-none">
+        {{ item.meta.reference_1.titles[0].value | truncate(50) }}
+      </span>
+      <span class="d-none d-sm-flex">
+        {{ item.meta.reference_1.titles[0].value | truncate(200) }}
+      </span>
     </template>
     <template #[`item.meta`]="{ item }">
-      {{ JSON.stringify(item.meta, null, 4) }}
+      {{ item.meta.reference_1.abstracts?.[0]?.value ?? "No abstract available" | truncate(200) }}
     </template>
     <template #[`item.assignee`]="{ item }">
       <v-combobox

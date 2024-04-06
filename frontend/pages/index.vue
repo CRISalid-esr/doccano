@@ -16,6 +16,7 @@ export default {
     FeatureCards,
     TheTopBanner,
     TheBottomBanner
-  }
+  },
+  middleware: ['auth'],
 }
 </script>

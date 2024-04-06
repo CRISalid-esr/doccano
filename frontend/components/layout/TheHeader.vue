@@ -1,12 +1,6 @@
 <template>
   <v-app-bar app clipped-left>
     <slot name="leftDrawerIcon" />
-    <nuxt-link v-if="!isAuthenticated" to="/" style="line-height: 0">
-      <img src="~/assets/icon.png" height="48" />
-    </nuxt-link>
-    <v-toolbar-title v-if="!isAuthenticated" class="ml-2 d-none d-sm-flex">
-      doccano
-    </v-toolbar-title>
     <v-btn
       v-if="isAuthenticated && isIndividualProject"
       text
@@ -18,6 +12,12 @@
       </v-icon>
       <span> {{ currentProject.name }}</span>
     </v-btn>
+    <nuxt-link  to="/" style="line-height: 0">
+      <img src="~/assets/logo-CRISALID-mini.svg" alt="CRISalid" height="40" />
+    </nuxt-link>
+    <v-toolbar-title class="ml-2 d-none d-sm-flex">
+      CRISalid training data
+    </v-toolbar-title>
     <div class="flex-grow-1" />
     <the-color-mode-switcher />
     <locale-menu />

@@ -29,23 +29,6 @@
     >
       {{ $t('header.projects') }}
     </v-btn>
-    <v-menu v-if="!isAuthenticated" open-on-hover offset-y>
-      <template #activator="{ on }">
-        <v-btn text v-on="on">
-          {{ $t('home.demoDropDown') }}
-          <v-icon>{{ mdiMenuDown }}</v-icon>
-        </v-btn>
-      </template>
-      <v-list>
-        <v-list-item
-          v-for="(item, index) in items"
-          :key="index"
-          @click="$router.push('/demo/' + item.link)"
-        >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
     <v-btn v-if="!isAuthenticated" outlined @click="$router.push(localePath('/auth'))">
       {{ $t('user.login') }}
     </v-btn>
